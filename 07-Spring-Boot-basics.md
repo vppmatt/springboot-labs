@@ -47,6 +47,12 @@ public CustomerService(CustomerRepository customerRepository) {
 
 4. **Create methods** in this class to retrieve all the customers, to find all customers by country, find a customer by id, and to save a customer.
 
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
+
 ```
 public List<Customer> findAll() {
    return customerRepository.findAll();
@@ -71,6 +77,7 @@ public Customer save(Customer customer) {
 CustomerService customerService = context.getBean(CustomerService.class);
 ```
 
+</details>
 
 ## 2. Applying Spring Boot conventions
 

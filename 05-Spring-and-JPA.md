@@ -41,6 +41,12 @@ Before starting this lab, **you should have cloned the repository for the Spring
 
 2. Copy the following code into the main method of the Application, to test that JPA is working in Spring:
 
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
+
 ```
 public static void main(String[] args) {
     ApplicationContext context = SpringApplication.run(SpringJpaDemoApplication.class, args);
@@ -55,6 +61,9 @@ public static void main(String[] args) {
     }
 }
 ```
+
+</details>
+
 ## 4.  Create a DAO
 
 1. Create a new class called `CustomerDao`. 

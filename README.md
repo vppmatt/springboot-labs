@@ -23,5 +23,19 @@ This set of exercises will guide you through the steps to build a functioning RE
 
 [Lab 8 - Restful Webservices](/08-Restful-webservices.md)
 
-** TO HERE (next is 402) **
+[Lab 9 part 1 - Spring and Rest](/09a-Spring-and-Rest.md)
+
+[Lab 9 part 2 - Spring and Rest](/09b-Spring-and-Rest.md)
+
+[Lab 10 - Create a Data Transfer Object](/10-Data-transfer-objects.md)
+
+[Lab 11 - Logging](/11-Logging.md)
+
+[Lab 12 - Aspect Oriented Programming](/12-AOP.md)
+
+[Lab 13 - Testing](/13-Testing.md)
+
+[Lab 14 - Role based access control and security](/14-Role-based-access-control.md)
+
+
  

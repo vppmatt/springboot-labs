@@ -215,21 +215,42 @@ public class Customer {
 
 2. In this method, Create an `EntityManagerFactory` and from this create an `EntityManager` object.
 
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
+
 ```
 EntityManagerFactory factory = Persistence.createEntityManagerFactory("invoiceManagerPersistenceUnit");
 EntityManager em = factory.createEntityManager();
 ```
+</details>
 
 3. **Close** the entity manager and factory at the end of the file (note that the code you write in the remainder of this lab will need go BEFORE the objects are closed.)
+
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
 
 ```
 em.close();
 factory.close();
 ```
 
+</details>
+
 4. Create a query to retrieve data:
   * Retrieve all the customers from the database into a List of Customers.
   * Loop through the list printing out the customers to the console
+
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
 
 ```
 TypedQuery<Customer> getAllCustomersQuery = em.createQuery("select c from Customer c", Customer.class);
@@ -239,18 +260,32 @@ for (Customer customer : customers) {
     System.out.println(customer.toString());
 }
 ```  
+</details>
 
 5. Create a query to retreive a single customer:
 
   * Find a customer with a specific ID
   * print that customer out to the console
 
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
+
 ```
 Customer customer81 = em.find(Customer.class, 81L);
 System.out.println("Customer 81 is " + customer81);
 ```
+</details>
 
 6. Find all the customers (there is just 1) whose phone number starts with +33 and print that customer out to the console. 
+
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
 
 ```
 TypedQuery<Customer> getSpecificCustomerQuery =
@@ -259,7 +294,15 @@ Customer foundCustomer = getSpecificCustomerQuery.getSingleResult();
 System.out.println("Customer " + foundCustomer );
 ```
 
+</details>
+
 7. Create a new customer – use any values you like for the name, address, email etc. If any values are blank, use nulls. Note that for a NEW customer the database will generate the ID so set the ID to null. Don’t forget to use a transaction.
+
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
 
 ```
 EntityTransaction tx = em.getTransaction();
@@ -271,7 +314,15 @@ tx.commit();
 System.out.println("The new customer was given an ID of " + newCustomer.getId());
 ```
 
+</details>
+
 8. If you wish, practice updating and deleting a customer (optional). 
+
+<details>
+
+<summary>
+Expand to view the code sample
+</summary>
 
 ```
 tx.begin();
@@ -282,6 +333,8 @@ tx.begin();
 em.remove(newCustomer);
 tx.commit();
 ```
+
+</details>
 
 ## 7. Review the sample solution
 
